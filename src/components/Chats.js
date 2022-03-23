@@ -32,7 +32,7 @@ const Chats = () => {
 // this is a secret ip and key  
         axios.get('https://api.chatengine.io/users/me', {
             headers: {
-                "project-id": process.env.REACT_CHAT_APP_ENGINE_ID,
+                "project-id":process.env.REACT_APP_CHAT_ENGINE_ID,
                 "user-name": user.email,
                 "user-secret": user.uid,
 
@@ -52,7 +52,7 @@ const Chats = () => {
                         formdata.append('avatar', avatar, avatar.name)
                         axios.post('https://api.chatengine.io/users/',
                             formdata,
-                            { headers: { "private-key": process.env.REACT_CHAT_APP_ENGINE_KEY } }
+                            { headers: { "private-key": process.env.REACT_APP_CHAT_ENGINE_KEY} }
                         )
                             .then(() => setLoading(false))
                             .catch((error) => console.log(error))
@@ -79,7 +79,7 @@ const Chats = () => {
             </div>
             <ChatEngine
                 height="calc(100vh - 66px)"
-                projectID= {process.env.REACT_CHAT_APP_ENGINE_ID}
+                projectID= {process.env.REACT_APP_CHAT_ENGINE_ID}
                 userName={user.email}
                 userSecret={user.uid}
             />
