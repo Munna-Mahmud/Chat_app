@@ -8,10 +8,12 @@ const Login = () => {
 
     return (
         <div id="login-page">
+          <h1 style={{color: "white",  textAlign: "center", padding:"40px" }}>My Chats Login Page App</h1>
+          
             {/* //** this is full loging card  * */}
 
             <div id='login-card'>
-                <h2>Welcome to My_Chat!</h2>
+                <h2 style={{padding:'10px'}}>Welcome to My_Chat!</h2>
                 <div
                     className="login-button google"
                     onClick={() =>
